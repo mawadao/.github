@@ -1,17 +1,17 @@
 <div align="center">
 
-<img src="./assets/banner.svg" alt="MAAVA Community banner" width="100%" />
+<img src="./assets/banner.svg" alt="MAWA DAO — Decentralized Autonomous Organization" width="100%" />
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1000&color=F7B733&center=true&vCenter=true&width=650&lines=Contribute+to+Open+Source.;Build+AI+Agents%2C+MCPs+%26+AI+Skills.;Ship+Web3+%2F+Blockchain+projects.;Learn+together.+Grow+together.;Give+back+together.+%F0%9F%92%9B" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1000&color=F7B733&center=true&vCenter=true&width=650&lines=Contribute+to+Open+Source.;Build+AI+Agents%2C+MCPs+%26+AI+Skills.;Ship+Web3+%2F+Blockchain+projects.;Owned+%26+governed+by+the+community.;Give+back+together.+%F0%9F%92%9B" alt="Typing SVG" />
 
-<!-- TODO: replace these placeholder links with your real community links -->
+<!-- TODO: replace the Discord and X placeholder links with your real community links -->
 [![Discord](https://img.shields.io/badge/Discord-Join%20us-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/your-invite-code)&nbsp;&nbsp;
-[![Twitter/X](https://img.shields.io/badge/Follow-@maavacommunity-000000?style=flat-square&logo=x&logoColor=white)](https://twitter.com/your-handle)&nbsp;&nbsp;
-[![Website](https://img.shields.io/badge/Website-maava.dev-orange?style=flat-square&logo=googlechrome&logoColor=white)](https://your-website.example)&nbsp;&nbsp;
-[![GitHub org followers](https://img.shields.io/github/followers/Maavacommunity?style=flat-square&label=Followers&color=7f5af0)](https://github.com/Maavacommunity)&nbsp;&nbsp;
+[![Twitter/X](https://img.shields.io/badge/Follow-@mawadao-000000?style=flat-square&logo=x&logoColor=white)](https://twitter.com/your-handle)&nbsp;&nbsp;
+[![Website](https://img.shields.io/badge/Website-mawadao.com-orange?style=flat-square&logo=googlechrome&logoColor=white)](https://mawadao.com)&nbsp;&nbsp;
+[![GitHub org followers](https://img.shields.io/github/followers/mawadao?style=flat-square&label=Followers&color=7f5af0)](https://github.com/mawadao)&nbsp;&nbsp;
 ![Contributors welcome](https://img.shields.io/badge/Contributors-welcome-brightgreen?style=flat-square)
 
-**MAAVA** — a community for developers & students who learn by building: contributing to open source, shipping new projects, and exploring **AI/Agents/MCP** and **Web3/Blockchain**. 💛 A portion of every project's success goes toward fighting world hunger and funding orphan education.
+**MAWA DAO** is a **Decentralized Autonomous Organization** of developers & students who learn by building: contributing to open source, shipping new projects, and exploring **AI/Agents/MCP** and **Web3/Blockchain**. The community owns its direction — members propose, discuss and decide together, in the open. 💛 Our mission is unchanged: a portion of every project's success goes toward fighting world hunger and funding orphan education.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)&nbsp;&nbsp;
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)&nbsp;&nbsp;

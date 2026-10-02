@@ -43,8 +43,8 @@
   </g>
 
   <!-- wordmark -->
-  <text x="640" y="155" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="88" font-weight="700" fill="#ffffff" letter-spacing="6">MAAVA</text>
-  <text x="640" y="190" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="20" font-weight="400" fill="url(#accent)" letter-spacing="10">C O M M U N I T Y</text>
+  <text x="640" y="150" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="88" font-weight="700" fill="#ffffff" letter-spacing="6">MAWA<tspan fill="url(#accent)" dx="28">DAO</tspan></text>
+  <text x="640" y="188" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="16" font-weight="400" fill="url(#accent)" letter-spacing="7">DECENTRALIZED AUTONOMOUS ORGANIZATION</text>
 
   <!-- tagline -->
   <text x="640" y="240" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="18" fill="#d8d6f0" letter-spacing="1">Open Source&#160;&#160;•&#160;&#160;AI &amp; Agents &amp; MCP&#160;&#160;•&#160;&#160;Web3 &amp; Blockchain</text>
@@ -52,5 +52,5 @@
   <!-- divider -->
   <rect x="540" y="262" width="200" height="3" rx="1.5" fill="url(#accent)"/>
 
-  <text x="640" y="292" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#a9a6cc" letter-spacing="1">Build together. Learn together. Give back together.</text>
+  <text x="640" y="292" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#a9a6cc" letter-spacing="1">Community-owned. Community-governed. Built to give back.  •  mawadao.com</text>
 </svg>

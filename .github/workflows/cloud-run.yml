@@ -1,0 +1,144 @@
+name: Build and deploy to Cloud Run
+
+# Shared by every mawaDao repository. Builds a container image on GitHub Actions; on main and
+# release tags pushes it to Artifact Registry, and on main deploys it to Cloud Run.
+# Pull requests (including from forks) only build, with no access to Google Cloud.
+#
+# GitHub signs in to Google Cloud with Workload Identity Federation: there are no keys or
+# secrets. Only workflows in the mawadao organisation, on main or a tag, are accepted.
+#
+# Usage (in a repository's .github/workflows/deploy.yml):
+#
+#   permissions: { contents: read, id-token: write }
+#   jobs:
+#     cloud-run:
+#       uses: mawadao/.github/.github/workflows/cloud-run.yml@main
+#       with:
+#         image: mawadao-agent-frontend
+#         service: mawadao-agent-frontend   # leave out to build and push only
+
+on:
+  workflow_call:
+    inputs:
+      image:
+        description: Image name in Artifact Registry
+        type: string
+        required: true
+      service:
+        description: Cloud Run service to deploy on main. Empty means build and push only.
+        type: string
+        default: ''
+      context:
+        description: Docker build context
+        type: string
+        default: '.'
+      dockerfile:
+        description: Dockerfile path, relative to the context
+        type: string
+        default: Dockerfile
+      build-args:
+        description: Docker build arguments, one KEY=value per line (not secrets)
+        type: string
+        default: ''
+      public:
+        description: Allow unauthenticated requests (for public websites and APIs)
+        type: boolean
+        default: false
+      flags:
+        description: Extra flags for gcloud run deploy
+        type: string
+        default: ''
+      region:
+        type: string
+        default: europe-west1
+
+env:
+  REGISTRY: europe-west1-docker.pkg.dev/mawadao/mawadao
+  WIF_PROVIDER: projects/181310023270/locations/global/workloadIdentityPools/github/providers/github-actions
+  DEPLOY_SA: github-deploy@mawadao.iam.gserviceaccount.com
+
+jobs:
+  build:
+    name: Build${{ inputs.service && ' and deploy' || '' }} ${{ inputs.image }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    concurrency:
+      group: cloud-run-${{ inputs.image }}-${{ github.ref }}
+      cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decide what to publish
+        id: mode
+        run: |
+          publish=false; deploy=false; tag=""
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            case "${{ github.ref }}" in
+              refs/heads/main) publish=true; tag=main; [ -n "${{ inputs.service }}" ] && deploy=true ;;
+              refs/tags/*)     publish=true; tag="${{ github.ref_name }}" ;;
+            esac
+          fi
+          { echo "publish=$publish"; echo "deploy=$deploy"; echo "tag=$tag"; } >> "$GITHUB_OUTPUT"
+
+      - name: Sign in to Google Cloud
+        id: auth
+        if: steps.mode.outputs.publish == 'true'
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ env.WIF_PROVIDER }}
+          service_account: ${{ env.DEPLOY_SA }}
+          token_format: access_token
+
+      - name: Sign in to Artifact Registry
+        if: steps.mode.outputs.publish == 'true'
+        uses: docker/login-action@v3
+        with:
+          registry: europe-west1-docker.pkg.dev
+          username: oauth2accesstoken
+          password: ${{ steps.auth.outputs.access_token }}
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build${{ steps.mode.outputs.publish == 'true' && ' and push' || '' }}
+        uses: docker/build-push-action@v6
+        with:
+          context: ${{ inputs.context }}
+          file: ${{ inputs.context }}/${{ inputs.dockerfile }}
+          build-args: ${{ inputs.build-args }}
+          push: ${{ steps.mode.outputs.publish == 'true' }}
+          tags: |
+            ${{ env.REGISTRY }}/${{ inputs.image }}:${{ github.sha }}
+            ${{ steps.mode.outputs.tag && format('{0}/{1}:{2}', env.REGISTRY, inputs.image, steps.mode.outputs.tag) || '' }}
+          labels: |
+            org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
+            org.opencontainers.image.revision=${{ github.sha }}
+          cache-from: type=gha,scope=${{ inputs.image }}
+          cache-to: type=gha,mode=max,scope=${{ inputs.image }}
+
+      - name: Deploy to Cloud Run
+        id: deploy
+        if: steps.mode.outputs.deploy == 'true'
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: ${{ inputs.service }}
+          region: ${{ inputs.region }}
+          image: ${{ env.REGISTRY }}/${{ inputs.image }}:${{ github.sha }}
+          flags: ${{ inputs.public && '--allow-unauthenticated' || '' }} ${{ inputs.flags }}
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### ${{ inputs.image }}"
+            echo ""
+            if [ "${{ steps.mode.outputs.publish }}" = "true" ]; then
+              echo "- Image: \`${{ env.REGISTRY }}/${{ inputs.image }}:${{ github.sha }}\`"
+            else
+              echo "- Built only (pull requests and branches other than main don't publish)"
+            fi
+            if [ -n "${{ steps.deploy.outputs.url }}" ]; then
+              echo "- Deployed to Cloud Run service \`${{ inputs.service }}\`: ${{ steps.deploy.outputs.url }}"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

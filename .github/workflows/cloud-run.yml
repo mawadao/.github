@@ -14,8 +14,8 @@ name: Build and deploy to Cloud Run
 #     cloud-run:
 #       uses: mawadao/.github/.github/workflows/cloud-run.yml@main
 #       with:
-#         image: mawadao-agent-frontend
-#         service: mawadao-agent-frontend   # leave out to build and push only
+#         image: mawa-frontend
+#         service: mawa-frontend   # leave out to build and push only
 
 on:
   workflow_call:

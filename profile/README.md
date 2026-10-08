@@ -2,7 +2,7 @@
 
 <img src="./assets/banner.svg" alt="MAWA DAO — a community-owned marketplace for responsible AI agents" width="100%" />
 
-### A non-profit, community-owned marketplace for responsible AI agents, built to bring quality education to underserved children and orphans.
+### Community-Governed AI & Blockchain Technologies for Education
 
 [![Website](https://img.shields.io/badge/Website-mawadao.com-orange?style=flat-square&logo=googlechrome&logoColor=white)](https://mawadao.com)&nbsp;&nbsp;
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0)&nbsp;&nbsp;
@@ -12,9 +12,14 @@
 
 </div>
 
-**Our mission:** to educate underserved children and orphans using AI, through a platform that is owned by its community, governed transparently, and held to the highest standards of responsible AI.
+**Build it. Own it. Share it.** Free for everyone, with a share of every success going to children who need it most.
 
-Millions of children, particularly orphans and those in low-income or remote communities, have no access to good teachers, tutoring or learning resources. mawaDao connects them with the developers building AI agents that could help close that gap. **Developers build and list agents. Schools, orphanages, community educators and small businesses use them free of charge.** The value created flows back to the community that built it, and the people affected by the platform decide how it is run.
+mawaDao brings together agentic AI and blockchain technologies to create an open,
+community-owned ecosystem for education. **Developers build and list AI agents on the mawa
+Marketplace. Educators, students and content creators use them to teach, learn, research and
+inform.** There are no listing fees, no creation fees and no commissions. When a product earns
+money, **75% goes to the community who built it and 25% goes to mawa** to educate deserving
+children, orphans and street children.
 
 > 🌱 **Early stage.** We are looking for founding contributors, education partners and pilot communities. [Get involved ↓](#contributing)
 
@@ -22,12 +27,11 @@ Millions of children, particularly orphans and those in low-income or remote com
 <summary><b>How it works</b></summary>
 <br>
 
-1. **Developers build** AI agents for education, learning support and small-business needs, and submit them to the open marketplace.
-2. **Agents are reviewed** against our responsible AI and child-safety standards before they are made available.
-3. **Schools, educators and small businesses use** the agents free of charge through the marketplace.
-4. **Usage and impact are recorded** on a blockchain ledger, so contributions and outcomes are transparent and verifiable.
-5. **Rewards return to the community**: developers, reviewers, educators and local communities are recognised and rewarded for the value they create.
-6. **The community governs** the platform through a decentralised autonomous organisation (DAO) operating at local, country and global community level.
+1. **Create and list, free.** Anyone can build an AI agent and list it on the mawa Marketplace, free, always.
+2. **Propose a project.** Any community member can propose a new product, such as an AI science tutor or a research agent for content creators.
+3. **The DAO votes.** The community votes on proposals, and approved projects get the backing of the community.
+4. **Build together.** Developers, educators, designers, translators and subject experts contribute. Every contribution is recorded transparently on the blockchain.
+5. **Share the rewards.** When a product is monetised, revenue is split automatically: 75% to community contributors, 25% to mawa, to educate deserving children, orphans and street children.
 
 </details>
 
@@ -35,9 +39,9 @@ Millions of children, particularly orphans and those in low-income or remote com
 <summary><b>Key features</b></summary>
 <br>
 
-- **Open agent marketplace.** List and share agents for free. No listing fees and no platform commission on educational use.
+- **Open agent marketplace.** List and share agents for free. No listing fees, no creation fees and no commissions.
+- **Automatic revenue sharing.** The 75/25 split is enforced in code, not left to promises.
 - **Blockchain-linked agents.** Each agent has an on-chain identity recording its author, version history, review status and usage.
-- **Community rewards.** Building agents, reviewing code, translating content, reporting safety issues and supporting schools earn recognition and rewards, distributed transparently through smart contracts.
 - **Shared ownership.** Contributors become co-owners of the platform with a voice in its direction.
 - **Multi-level governance.** Decisions are made as close as possible to the people they affect.
 - **Built for low-resource settings.** Agents work on low-cost devices, with limited bandwidth, and in local languages wherever possible.
@@ -61,17 +65,16 @@ Proposals, votes and outcomes are recorded on-chain so that every decision can b
 </details>
 
 <details>
-<summary><b>Responsible AI and child safety</b></summary>
+<summary><b>Responsible AI and safeguarding</b></summary>
 <br>
 
-Because this platform serves children, safety is not optional. Every agent listed must meet these standards:
+Because this platform serves children and young people, safety comes first.
 
-- **Safeguarding first.** Agents used with children must pass child-safety review, must not collect unnecessary personal data, and must include age-appropriate content filtering.
-- **Privacy by design.** No personal data about children is stored on a public blockchain. On-chain records cover agents, contributions and aggregated impact only.
-- **Transparency.** Users can see who built an agent, what it is designed to do, its known limitations and its review history.
-- **Fairness and inclusion.** Agents are tested for bias and for suitability across languages, cultures and learning needs.
-- **Human oversight.** Agents support teachers and carers; they do not replace them.
-- **Accountability.** Anyone can report a safety concern, and unsafe agents can be suspended immediately.
+- **Safeguarding by design.** Agents used with children must meet mawaDao's safeguarding and content standards before listing.
+- **Privacy.** Learners' data, especially children's, is minimised, protected and never sold.
+- **Accuracy.** Educational content, especially in subjects like medicine, is reviewed by qualified educators or experts.
+- **Responsible content.** Agents used for content creation must support accurate, informative and respectful publishing.
+- **Inclusion.** Agents should work across languages, abilities, low-cost devices and low-bandwidth connections.
 
 </details>
 
@@ -79,10 +82,22 @@ Because this platform serves children, safety is not optional. Every agent liste
 <summary><b>Who it is for</b></summary>
 <br>
 
-- **AI developers** who want their work to make a real difference, build a public portfolio, earn rewards and help own the platform they contribute to.
-- **Schools, orphanages and educators** who need free, trustworthy AI tools for tutoring, literacy, numeracy, language learning and teaching support.
-- **Small businesses and community organisations** that want practical AI agents without the cost of commercial platforms.
-- **Funders, NGOs and partners** who want transparent, verifiable evidence of where support goes and what impact it has.
+- **AI developers** who list agents for free on the mawa Marketplace, contribute to community projects, and earn from what they help build.
+- **Content creators** who use mawa agents to research freely, create informative and educational content, and publish it.
+- **Schools, colleges and universities** who access AI agents for teaching, tutoring, assessment and learner support.
+- **Teachers and student teachers** who use agents to plan lessons, create materials and support every learner.
+- **Students** who learn with AI tutors and study tools in any subject, at their own pace.
+
+</details>
+
+<details>
+<summary><b>Impact: mawa schools</b></summary>
+<br>
+
+mawa is already running **two schools for deserving children**. mawaDao extends that mission
+into the age of AI. We are now setting up **Mawa School for AI**, giving deserving children,
+orphans and street children the skills to learn with, use and build AI. Every product
+monetised on mawaDao helps fund this work.
 
 </details>
 
@@ -116,18 +131,18 @@ Because this platform serves children, safety is not optional. Every agent liste
 <summary><b>Roadmap</b></summary>
 <br>
 
-- [ ] **Phase 1: Foundation.** Core marketplace, agent manifest standard, responsible AI and safeguarding policies, first education agents
-- [ ] **Phase 2: Pilot.** Pilots with a small number of schools and orphanages; contributor registry and reward mechanism live on testnet
-- [ ] **Phase 3: Governance.** DAO launch with local and country chapters; community voting on standards and reward rules
-- [ ] **Phase 4: Scale.** Multi-language support, offline and low-bandwidth deployment, expansion to small businesses and new regions
-- [ ] **Phase 5: Impact.** Public, verifiable impact reporting for communities, funders and partners
+- [ ] **Phase 1: Foundation.** Open-source repository, contributor guidelines and safeguarding standards
+- [ ] **Phase 2: mawa Marketplace.** Free agent listing and discovery for educators, students and content creators
+- [ ] **Phase 3: DAO governance.** Project proposals and community voting at local, country and community level
+- [ ] **Phase 4: Mawa School for AI.** AI education for deserving children, building on mawa's two existing schools
+- [ ] **Phase 5: Community token.** Launch of the mawaDao token
 
 </details>
 
 ### Contributing
 
-There are many ways to contribute, and not all of them involve code: build or improve AI agents for education and small businesses · review agents for safety, quality and bias · translate agents and learning content into local languages · improve documentation · connect schools, orphanages and communities to the platform · take part in governance.
+There are many ways to contribute, and not all of them involve code: build or improve AI agents for education and content creation · propose a project for the DAO to vote on · review agents for safety, quality and bias · translate agents and learning content into local languages · improve documentation · connect schools, colleges and communities to the platform · take part in governance.
 
 **Want in?** ⭐ Star & watch → [visit mawadao.com](https://mawadao.com) → pick an issue → start building.
 
-<img src="./assets/footer.svg" alt="Built by the community, owned by the community, for the children who need it most" width="100%" />
+<img src="./assets/footer.svg" alt="No fees, no commissions, community owned. Built by the community, for every child." width="100%" />

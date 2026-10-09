@@ -43,7 +43,7 @@
   </g>
 
   <!-- wordmark -->
-  <text x="640" y="150" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="88" font-weight="700" fill="#ffffff" letter-spacing="6">MAWA<tspan fill="url(#accent)" dx="28">DAO</tspan></text>
+  <text x="640" y="150" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="88" font-weight="700" fill="#ffffff" letter-spacing="6">MAAVA<tspan fill="url(#accent)" dx="28">DAO</tspan></text>
   <text x="640" y="188" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="16" font-weight="400" fill="url(#accent)" letter-spacing="7">DECENTRALISED AUTONOMOUS ORGANISATION</text>
 
   <!-- tagline -->
@@ -52,5 +52,5 @@
   <!-- divider -->
   <rect x="540" y="262" width="200" height="3" rx="1.5" fill="url(#accent)"/>
 
-  <text x="640" y="292" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#a9a6cc" letter-spacing="1">Non-profit  •  Governed transparently  •  mawadao.com</text>
+  <text x="640" y="292" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#a9a6cc" letter-spacing="1">Non-profit  •  Governed transparently  •  maavadao.com</text>
 </svg>

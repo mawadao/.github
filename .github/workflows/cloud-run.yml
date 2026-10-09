@@ -1,21 +1,21 @@
 name: Build and deploy to Cloud Run
 
-# Shared by every mawaDao repository. Builds a container image on GitHub Actions; on main and
+# Shared by every maavaDao repository. Builds a container image on GitHub Actions; on main and
 # release tags pushes it to Artifact Registry, and on main deploys it to Cloud Run.
 # Pull requests (including from forks) only build, with no access to Google Cloud.
 #
 # GitHub signs in to Google Cloud with Workload Identity Federation: there are no keys or
-# secrets. Only workflows in the mawadao organisation, on main or a tag, are accepted.
+# secrets. Only workflows in the maavadao organisation, on main or a tag, are accepted.
 #
 # Usage (in a repository's .github/workflows/deploy.yml):
 #
 #   permissions: { contents: read, id-token: write }
 #   jobs:
 #     cloud-run:
-#       uses: mawadao/.github/.github/workflows/cloud-run.yml@main
+#       uses: maavadao/.github/.github/workflows/cloud-run.yml@main
 #       with:
-#         image: mawa-frontend
-#         service: mawa-frontend   # leave out to build and push only
+#         image: maava-frontend
+#         service: maava-frontend   # leave out to build and push only
 
 on:
   workflow_call:

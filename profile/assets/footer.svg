@@ -12,6 +12,6 @@
   </defs>
   <path d="M0,60 C 320,120 960,0 1280,60 L1280,180 L0,180 Z" fill="url(#fbg)"/>
   <text x="640" y="115" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="24" font-weight="700" fill="#ffffff" letter-spacing="1">Built by the community, owned by the community 💛</text>
-  <text x="640" y="145" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#d8d6f0" letter-spacing="1">for the children who need it most  •  mawadao.com</text>
+  <text x="640" y="145" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#d8d6f0" letter-spacing="1">for the children who need it most  •  maavadao.com</text>
   <rect x="540" y="30" width="200" height="3" rx="1.5" fill="url(#faccent)"/>
 </svg>
